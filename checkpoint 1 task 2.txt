@@ -1,0 +1,32 @@
+VAR
+set1,set2,sum:STRING[];
+i,j,k,l,m,s:INTEGER:=0;
+
+Begin
+
+ FOR i FROM 0 TO set1.length-1 STEP 1 DO
+  FOR j FROM 0 TO set2.length-1 DO
+IF (set1.lenght>=set2.length) THEN
+   IF (set1[i]==set2[j]) THEN
+    set1.delete(set1[i]);
+  sum[i]:=set1[j];
+  END_IF
+  END_FOR
+FOR j FROM 0 TO set1.length-1 STEP 1 DO
+ FOR i FROM 0 TO  sum.length-1 STEP 1 DO
+    sum[i]:=set1[j];
+ELSE 
+   IF (set2[i]==set1[j]) THEN
+    set1.delete(set2[i]);
+  sum[i]:=set2[j];
+  END_IF
+  END_FOR
+FOR j FROM 0 TO set1.length-1 STEP 1 DO
+ FOR i FROM 0 TO  sum.length-1 STEP 1 DO
+    sum[i]:=set1[j];
+ 
+ FOR k FROM 0 TO sum.length-1 STEP 1 DO
+  s+=sum[k];
+ END_FOR
+Write("The Sum Of distinct element are"+s+sum[]);
+END

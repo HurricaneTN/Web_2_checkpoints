@@ -1,0 +1,25 @@
+VAR
+str:STRING[];
+
+i,j,k,l:INTEGER:=0;
+Begin
+  Write("Enter your Sentence, finished with point");
+  Read(str);
+
+ IF (str[str.length-1]<>".") THEN
+  Write("The sentence does not finished with point");
+ ELSE 
+  FOR i FROM 0 TO str.length-1 STEP 1 DO
+   IF (str[i]==" ")THEN
+   j++;
+   END_IF
+  END_FOR
+ Write("The Sentencre Contain"+j+"Words");
+
+  FOR l FROM 0 TO str.length-1 STEP 1 DO
+   IF (str[l] in [a, e, i, o, u,y] ) THEN
+    k++;
+   END_IF
+  END_FOR
+ Write("The number of vowels in the sentence is"+k);
+END;
