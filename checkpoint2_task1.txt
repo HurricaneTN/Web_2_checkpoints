@@ -1,0 +1,14 @@
+ALGORITHM checkpoint2_task1
+cards_array:[6,2,4,7,1]
+i,j,k:INTEGER;
+BEGIN
+FOR i FROM 1 TO cards_array.length-1 DO
+    k = cards_array[i];
+    j=i-1;
+    WHILE j>=0 && cards_array[j]>k
+     cards_array[j+1]=cards_array[j];
+     j--;
+    cards_array[j]=k;
+END
+
+
